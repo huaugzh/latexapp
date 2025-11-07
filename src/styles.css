@@ -1,0 +1,119 @@
+* { box-sizing: border-box; }
+body, html, #root { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; }
+.app { display: flex; height: 100vh; }
+
+.sidebar { 
+  width: 250px; 
+  border-right: 1px solid #ddd; 
+  padding: 16px; 
+  background: #f8f9fb;
+  overflow-y: auto;
+}
+.sidebar h2 { margin-top: 0; color: #2c3e50; }
+.sidebar ul { 
+  list-style: none; 
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.sidebar li { 
+  padding: 8px 12px;
+  cursor: pointer; 
+  border-radius: 6px;
+  margin: 4px 0;
+  transition: all 0.2s;
+}
+.sidebar li:hover { background: #e3f2fd; }
+.sidebar li.active { 
+  background: #2196f3; 
+  color: white;
+}
+
+.templates {
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.templates h3 { 
+  margin: 0 0 12px 0;
+  color: #2c3e50;
+}
+.templates button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.templates button:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.main { 
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+}
+
+.editor, .preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.editor h2, .preview h2 {
+  margin: 0;
+  padding: 16px;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+}
+
+.editor textarea {
+  flex: 1;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+
+.preview-box {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-box .katex-display {
+  margin: 0;
+}
+
+.latex-raw {
+  white-space: pre-wrap;
+  font-family: Consolas, "Courier New", monospace;
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.error {
+  color: #cc0000;
+  padding: 12px;
+  background: #fff5f5;
+  border-radius: 4px;
+  border: 1px solid #ffcdd2;
+}
